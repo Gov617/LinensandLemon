@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Charlotte Maid Co. | Hotel-Grade Luxury Housekeeping</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        noir: {
+                            900: '#0B0C10',
+                            800: '#12141A',
+                            700: '#1A1D24',
+                            600: '#262A34'
+                        },
+                        gold: {
+                            400: '#F3E5AB',
+                            500: '#D4AF37',
+                            600: '#AA7C11',
+                            700: '#855E00'
+                        },
+                        champagne: '#F7E7CE',
+                        silk: '#E8E6E1'
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0B0C10;
+            color: #E8E6E1;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF6D6 0%, #D4AF37 50%, #AA7C11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-gradient {
+            border-image: linear-gradient(to right, #D4AF37, #855E00) 1;
+        }
+        .glass-panel {
+            background: rgba(26, 29, 36, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .glass-panel-gold {
+            background: rgba(212, 175, 55, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .custom-checkbox:checked {
+            background-color: #D4AF37;
+            border-color: #D4AF37;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-noir-900">
+
+    <header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex flex-col">
+                <span class="font-serif text-lg sm:text-xl font-bold tracking-widest text-white uppercase">The Charlotte Maid Co.</span>
+                <span class="text-[9px] tracking-[0.25em] text-gold-500 uppercase font-light">A Roxbury USA Holdings Agency</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-xs font-medium tracking-widest uppercase text-silk/80">
+                <a href="#services" class="hover:text-gold-500 transition-colors">Services</a>
+                <a href="#standard" class="hover:text-gold-500 transition-colors">The Hotel Standard</a>
+                <a href="#calculator" class="hover:text-gold-500 transition-colors">Instant Quote</a>
+                <a href="#neighborhoods" class="hover:text-gold-500 transition-colors">Areas Served</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden sm:block">
+                <a href="#calculator" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-gold-600 to-gold-500 text-noir-900 font-semibold text-xs tracking-wider uppercase shadow-lg shadow-gold-500/10 hover:shadow-gold-500/20 hover:scale-105 transition-all duration-300 inline-block">
+                    Book Luxury Clean
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-silk focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-gold-500/20 px-4 pt-4 pb-6 space-y-3">
+            <a href="#services" class="block text-sm uppercase tracking-wider text-silk hover:text-gold-500">Services</a>
+            <a href="#standard" class="block text-sm uppercase tracking-wider text-silk hover:text-gold-500">The Hotel Standard</a>
+            <a href="#calculator" class="block text-sm uppercase tracking-wider text-silk hover:text-gold-500">Instant Quote</a>
+            <a href="#neighborhoods" class="block text-sm uppercase tracking-wider text-silk hover:text-gold-500">Areas Served</a>
+            <a href="#calculator" class="block w-full text-center py-3 mt-4 rounded-full bg-gold-500 text-noir-900 font-bold text-xs uppercase tracking-widest">
+                Book Luxury Clean
+            </a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <section class="relative min-h-[90vh] flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+            <!-- Background Radial Glow -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+            <div class="max-w-5xl mx-auto text-center relative z-10 space-y-8">
+                <!-- Badge -->
+                <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full glass-panel-gold text-gold-400 text-xs tracking-widest uppercase font-medium">
+                    <span class="w-2 h-2 rounded-full bg-gold-500 animate-pulse"></span>
+                    <span>Exclusive Charlotte Residential Care</span>
+                </div>
+
+                <!-- Main Headline -->
+                <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-tight">
+                    Hotel-Grade Cleanliness.<br/>
+                    <span class="gold-gradient-text">Tailored for Charlotte’s Finest Homes.</span>
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="max-w-2xl mx-auto text-base sm:text-lg text-silk/70 font-light leading-relaxed">
+                    Boutique residential housekeeping delivered exclusively by trained hospitality specialists. Experience crisp linen resets, meticulous detail, and white-glove consistency.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                    <a href="#calculator" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 text-noir-900 font-bold text-sm tracking-widest uppercase shadow-xl shadow-gold-500/20 hover:scale-105 transition-all duration-300">
+                        Instant Online Quote
+                    </a>
+                    <a href="#standard" class="w-full sm:w-auto px-8 py-4 rounded-full glass-panel text-silk font-semibold text-sm tracking-widest uppercase hover:bg-gold-500/10 hover:border-gold-500/40 transition-all duration-300">
+                        Explore The Standard
+                    </a>
+                </div>
+
+                <!-- Neighborhood Badges -->
+                <div class="pt-12 border-t border-gold-500/10">
+                    <p class="text-xs uppercase tracking-widest text-silk/40 mb-4">Serving Premier Charlotte Neighborhoods</p>
+                    <div class="flex flex-wrap justify-center gap-2 sm:gap-3 text-xs font-medium text-silk/80">
+                        <span class="px-3 py-1 rounded-full bg-noir-800 border border-gold-500/20">Myers Park</span>
+                        <span class="px-3 py-1 rounded-full bg-noir-800 border border-gold-500/20">South End</span>
+                        <span class="px-3 py-1 rounded-full bg-noir-800 border border-gold-500/20">Uptown</span>
+                        <span class="px-3 py-1 rounded-full bg-noir-800 border border-gold-500/20">Dilworth</span>
+                        <span class="px-3 py-1 rounded-full bg-noir-800 border border-gold-500/20">Ballantyne</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="calculator" class="py-24 px-4 sm:px-6 lg:px-8 bg-noir-800/50 border-y border-gold-500/10">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center space-y-4 mb-16">
+                    <p class="text-gold-500 text-xs font-bold uppercase tracking-[0.3em]">Transparent Concierge Pricing</p>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Instant Service Calculator</h2>
+                    <p class="text-silk/60 text-sm max-w-xl mx-auto">Customize your clean, view live pricing, and reserve your hospitality team in under 60 seconds.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <!-- Calculator Inputs -->
+                    <div class="lg:col-span-7 glass-panel p-6 sm:p-8 rounded-2xl space-y-8">
+                        
+                        <!-- Step 1: Residence Type -->
+                        <div class="space-y-3">
+                            <label class="text-xs font-bold uppercase tracking-wider text-gold-400 block">1. Select Home Size</label>
+                            <div class="grid grid-cols-2 gap-3" id="residence-options">
+                                <button data-price="180" data-hours="2.0" class="residence-btn active p-4 rounded-xl border border-gold-500 bg-gold-500/10 text-left transition-all">
+                                    <div class="text-white font-semibold text-sm">1 Bed / 1-2 Bath</div>
+                                    <div class="text-xs text-silk/60 mt-1">Condo / Luxury Apartment</div>
+                                </button>
+                                <button data-price="230" data-hours="2.5" class="residence-btn p-4 rounded-xl border border-gold-500/20 bg-noir-800 text-left hover:border-gold-500/50 transition-all">
+                                    <div class="text-white font-semibold text-sm">2 Bed / 2 Bath</div>
+                                    <div class="text-xs text-silk/60 mt-1">Urban Loft / Condo</div>
+                                </button>
+                                <button data-price="290" data-hours="3.5" class="residence-btn p-4 rounded-xl border border-gold-500/20 bg-noir-800 text-left hover:border-gold-500/50 transition-all">
+                                    <div class="text-white font-semibold text-sm">3-4 Bed House</div>
+                                    <div class="text-xs text-silk/60 mt-1">Single Family / Townhome</div>
+                                </button>
+                                <button data-price="380" data-hours="4.5" class="residence-btn p-4 rounded-xl border border-gold-500/20 bg-noir-800 text-left hover:border-gold-500/50 transition-all">
+                                    <div class="text-white font-semibold text-sm">Luxury Estate</div>
+                                    <div class="text-xs text-silk/60 mt-1">4+ Bed / Premium Property</div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Cleaning Frequency -->
+                        <div class="space-y-3">
+                            <label class="text-xs font-bold uppercase tracking-wider text-gold-400 block">2. Cleaning Frequency</label>
+                            <div class="grid grid-cols-3 gap-2" id="frequency-options">
+                                <button data-discount="0.80" class="freq-btn p-3 rounded-xl border border-gold-500/20 bg-noir-800 text-center hover:border-gold-500/50 transition-all">
+                                    <div class="text-xs font-bold text-white">Weekly</div>
+                                    <div class="text-[10px] text-gold-400 mt-0.5">20% OFF</div>
+                                </button>
+                                <button data-discount="0.85" class="freq-btn active p-3 rounded-xl border border-gold-500 bg-gold-500/10 text-center transition-all">
+                                    <div class="text-xs font-bold text-white">Bi-Weekly</div>
+                                    <div class="text-[10px] text-gold-400 mt-0.5">15% OFF</div>
+                                </button>
+                                <button data-discount="1.00" class="freq-btn p-3 rounded-xl border border-gold-500/20 bg-noir-800 text-center hover:border-gold-500/50 transition-all">
+                                    <div class="text-xs font-bold text-white">One-Time</div>
+                                    <div class="text-[10px] text-silk/50 mt-0.5">Standard</div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Optional Concierge Add-Ons -->
+                        <div class="space-y-3">
+                            <label class="text-xs font-bold uppercase tracking-wider text-gold-400 block">3. Luxury Add-Ons</label>
+                            <div class="space-y-2">
+                                <label class="flex items-center justify-between p-3 rounded-xl border border-gold-500/10 bg-noir-800/80 cursor-pointer hover:border-gold-500/30 transition-all">
+                                    <div class="flex items-center space-x-3">
+                                        <input type="checkbox" value="35" data-name="Inside Fridge Sanitization" class="addon-checkbox h-4 w-4 rounded border-gold-500/30 text-gold-500 focus:ring-0 focus:ring-offset-0 bg-noir-900">
+                                        <span class="text-xs text-silk">Inside Refrigerator Sanitization</span>
+                                    </div>
+                                    <span class="text-xs text-gold-400 font-semibold">+$35</span>
+                                </label>
+                                <label class="flex items-center justify-between p-3 rounded-xl border border-gold-500/10 bg-noir-800/80 cursor-pointer hover:border-gold-500/30 transition-all">
+                                    <div class="flex items-center space-x-3">
+                                        <input type="checkbox" value="40" data-name="Oven Interior Restoration" class="addon-checkbox h-4 w-4 rounded border-gold-500/30 text-gold-500 focus:ring-0 focus:ring-offset-0 bg-noir-900">
+                                        <span class="text-xs text-silk">Oven Interior Deep Restoration</span>
+                                    </div>
+                                    <span class="text-xs text-gold-400 font-semibold">+$40</span>
+                                </label>
+                                <label class="flex items-center justify-between p-3 rounded-xl border border-gold-500/10 bg-noir-800/80 cursor-pointer hover:border-gold-500/30 transition-all">
+                                    <div class="flex items-center space-x-3">
+                                        <input type="checkbox" value="50" data-name="Interior Window Detail" class="addon-checkbox h-4 w-4 rounded border-gold-500/30 text-gold-500 focus:ring-0 focus:ring-offset-0 bg-noir-900">
+                                        <span class="text-xs text-silk">Interior Window & Sill Detail</span>
+                                    </div>
+                                    <span class="text-xs text-gold-400 font-semibold">+$50</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quote Summary Panel -->
+                    <div class="lg:col-span-5 glass-panel-gold p-6 sm:p-8 rounded-2xl space-y-6 sticky top-28 border border-gold-500/40">
+                        <div class="border-b border-gold-500/20 pb-4">
+                            <h3 class="font-serif text-xl font-bold text-white">Estimated Quote</h3>
+                            <p class="text-xs text-silk/60 mt-1">Guaranteed pricing. No hidden fees.</p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-baseline">
+                                <span class="text-xs text-silk/70 uppercase tracking-wider">Estimated Total</span>
+                                <div class="text-right">
+                                    <span id="quote-price" class="font-serif text-4xl font-bold gold-gradient-text">$153</span>
+                                    <span class="text-xs text-silk/40 block" id="freq-note">Billed Bi-Weekly</span>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center py-2 border-y border-gold-500/10 text-xs">
+                                <span class="text-silk/70"><i class="fa-regular fa-clock text-gold-500 mr-2"></i>Estimated Time</span>
+                                <span id="quote-time" class="font-semibold text-white">2.5 Hours</span>
+                            </div>
+
+                            <div class="space-y-2 text-xs text-silk/70">
+                                <div class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-check text-gold-500 text-[10px]"></i>
+                                    <span>2-Person Hospitality Specialist Team</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-check text-gold-500 text-[10px]"></i>
+                                    <span>Eco-Friendly Luxury Cleaning Solutions</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-check text-gold-500 text-[10px]"></i>
+                                    <span>Hospitality Crisp Linen Bed Reset</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button id="book-modal-trigger" class="w-full py-4 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 text-noir-900 font-bold text-sm tracking-widest uppercase shadow-lg shadow-gold-500/20 hover:scale-[1.02] transition-all">
+                            Reserve Your Slot
+                        </button>
+
+                        <p class="text-[10px] text-center text-silk/40">Powered by BookingKoala Dispatch & Roxbury USA Holdings LLC</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="standard" class="py-24 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center space-y-4 mb-20">
+                    <p class="text-gold-500 text-xs font-bold uppercase tracking-[0.3em]">Uncompromising Quality</p>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">The Hotel Standard Difference</h2>
+                    <p class="text-silk/60 text-sm max-w-2xl mx-auto">We do not dispatch gig workers. Our team consists of hotel-trained professionals who understand luxury care.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="glass-panel p-8 rounded-2xl space-y-4 border hover:border-gold-500/40 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-500 text-xl">
+                            <i class="fa-solid fa-bed"></i>
+                        </div>
+                        <h3 class="font-serif text-lg font-semibold text-white">Hospital Corners & Linen Resets</h3>
+                        <p class="text-xs text-silk/60 leading-relaxed">Precision bed making featuring crisp hospital corners, tailored pillow fluffs, and turndown presentation standard in 5-star suites.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="glass-panel p-8 rounded-2xl space-y-4 border hover:border-gold-500/40 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-500 text-xl">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <h3 class="font-serif text-lg font-semibold text-white">Hospitality W-2 Specialists</h3>
+                        <p class="text-xs text-silk/60 leading-relaxed">Every specialist is a vetted W-2 employee recruited directly from premier Charlotte luxury hotels—never unvetted 1099 contractors.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="glass-panel p-8 rounded-2xl space-y-4 border hover:border-gold-500/40 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-500 text-xl">
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                        <h3 class="font-serif text-lg font-semibold text-white">Surface-Safe Luxury Solutions</h3>
+                        <p class="text-xs text-silk/60 leading-relaxed">Formulated specifically for high-end residential finishes including natural Italian marble, quartz, unlacquered brass, and hardwood.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="glass-panel p-8 rounded-2xl space-y-4 border hover:border-gold-500/40 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-gold-500/10 flex items-center justify-center text-gold-500 text-xl">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 class="font-serif text-lg font-semibold text-white">100% Callback Guarantee</h3>
+                        <p class="text-xs text-silk/60 leading-relaxed">If any detail falls short of 5-star hotel inspection standards, our lead supervisor returns within 24 hours to re-clean at zero charge.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="neighborhoods" class="py-20 px-4 sm:px-6 lg:px-8 bg-noir-800/30 border-t border-gold-500/10">
+            <div class="max-w-4xl mx-auto text-center space-y-8">
+                <div class="space-y-2">
+                    <p class="text-gold-500 text-xs font-bold uppercase tracking-[0.3em]">Coverage Area</p>
+                    <h2 class="font-serif text-3xl font-bold text-white">Exclusively Serving Charlotte</h2>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-3">
+                    <div class="px-5 py-2.5 rounded-full glass-panel border-gold-500/20 text-silk text-xs font-semibold flex items-center space-x-2">
+                        <i class="fa-solid fa-location-dot text-gold-500"></i>
+                        <span>South End</span>
+                    </div>
+                    <div class="px-5 py-2.5 rounded-full glass-panel border-gold-500/20 text-silk text-xs font-semibold flex items-center space-x-2">
+                        <i class="fa-solid fa-location-dot text-gold-500"></i>
+                        <span>Myers Park</span>
+                    </div>
+                    <div class="px-5 py-2.5 rounded-full glass-panel border-gold-500/20 text-silk text-xs font-semibold flex items-center space-x-2">
+                        <i class="fa-solid fa-location-dot text-gold-500"></i>
+                        <span>Uptown Center City</span>
+                    </div>
+                    <div class="px-5 py-2.5 rounded-full glass-panel border-gold-500/20 text-silk text-xs font-semibold flex items-center space-x-2">
+                        <i class="fa-solid fa-location-dot text-gold-500"></i>
+                        <span>Dilworth</span>
+                    </div>
+                    <div class="px-5 py-2.5 rounded-full glass-panel border-gold-500/20 text-silk text-xs font-semibold flex items-center space-x-2">
+                        <i class="fa-solid fa-location-dot text-gold-500"></i>
+                        <span>Ballantyne</span>
+                    </div>
+                    <div class="px-5 py-2.5 rounded-full glass-panel border-gold-500/20 text-silk text-xs font-semibold flex items-center space-x-2">
+                        <i class="fa-solid fa-location-dot text-gold-500"></i>
+                        <span>NoDa</span>
+                    </div>
+                    <div class="px-5 py-2.5 rounded-full glass-panel border-gold-500/20 text-silk text-xs font-semibold flex items-center space-x-2">
+                        <i class="fa-solid fa-location-dot text-gold-500"></i>
+                        <span>Plaza Midwood</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="booking-modal" class="fixed inset-0 z-50 bg-noir-900/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="glass-panel p-6 sm:p-8 rounded-2xl max-w-lg w-full relative border border-gold-500/40 space-y-6">
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-silk/60 hover:text-white p-2">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+
+            <div class="space-y-1">
+                <h3 class="font-serif text-xl font-bold text-white">Complete Your Booking Request</h3>
+                <p class="text-xs text-silk/60">A concierge manager will confirm your scheduled slot within 2 hours.</p>
+            </div>
+
+            <form id="booking-form" class="space-y-4">
+                <div>
+                    <label class="block text-[10px] font-bold uppercase tracking-wider text-gold-400 mb-1">Full Name</label>
+                    <input type="text" required placeholder="e.g. Eleanor Vance" class="w-full px-4 py-3 rounded-xl bg-noir-900 border border-gold-500/20 text-white text-xs focus:border-gold-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold uppercase tracking-wider text-gold-400 mb-1">Phone Number</label>
+                    <input type="tel" required placeholder="(704) 555-0199" class="w-full px-4 py-3 rounded-xl bg-noir-900 border border-gold-500/20 text-white text-xs focus:border-gold-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold uppercase tracking-wider text-gold-400 mb-1">Service Address / Neighborhood</label>
+                    <input type="text" required placeholder="Myers Park / South End" class="w-full px-4 py-3 rounded-xl bg-noir-900 border border-gold-500/20 text-white text-xs focus:border-gold-500 focus:outline-none">
+                </div>
+
+                <div class="p-4 rounded-xl bg-gold-500/10 border border-gold-500/20 text-xs space-y-1">
+                    <div class="flex justify-between text-white font-semibold">
+                        <span>Estimated Total:</span>
+                        <span id="modal-summary-price" class="gold-gradient-text font-bold">$153.00</span>
+                    </div>
+                    <div class="text-[10px] text-silk/60">No payment collected now. Card charged upon completion.</div>
+                </div>
+
+                <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 text-noir-900 font-bold text-xs tracking-widest uppercase shadow-lg shadow-gold-500/20">
+                    Confirm Concierge Reservation
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-noir-900 border-t border-gold-500/10 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div>
+                <span class="font-serif text-lg font-bold text-white tracking-widest block uppercase">The Charlotte Maid Co.</span>
+                <p class="text-[11px] text-silk/50 mt-1">Boutique Luxury Residential Care & Hotel-Grade Turnovers</p>
+            </div>
+
+            <div class="text-xs text-silk/40 space-y-1">
+                <p>© 2026 Roxbury USA Holdings LLC dba The Charlotte Maid Co. All rights reserved.</p>
+                <p>Operating in Charlotte, North Carolina • Licensed & Fully Insured</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Interactive Calculator Logic
+            let basePrice = 180;
+            let baseHours = 2.0;
+            let discountMultiplier = 0.85; // Default bi-weekly
+
+            const priceDisplay = document.getElementById('quote-price');
+            const timeDisplay = document.getElementById('quote-time');
+            const freqNote = document.getElementById('freq-note');
+            const modalSummaryPrice = document.getElementById('modal-summary-price');
+
+            function calculateQuote() {
+                // Calculate Addons
+                let addOnTotal = 0;
+                document.querySelectorAll('.addon-checkbox:checked').forEach(cb => {
+                    addOnTotal += parseFloat(cb.value);
+                });
+
+                // Total Calculation
+                const finalPrice = Math.round((basePrice * discountMultiplier) + addOnTotal);
+                
+                // Render UI
+                priceDisplay.textContent = `$${finalPrice}`;
+                modalSummaryPrice.textContent = `$${finalPrice}.00`;
+                timeDisplay.textContent = `${baseHours} Hours`;
+            }
+
+            // Residence Type Selection
+            document.querySelectorAll('.residence-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.residence-btn').forEach(b => {
+                        b.classList.remove('active', 'border-gold-500', 'bg-gold-500/10');
+                        b.classList.add('border-gold-500/20', 'bg-noir-800');
+                    });
+                    
+                    const target = e.currentTarget;
+                    target.classList.add('active', 'border-gold-500', 'bg-gold-500/10');
+                    target.classList.remove('border-gold-500/20', 'bg-noir-800');
+
+                    basePrice = parseFloat(target.dataset.price);
+                    baseHours = parseFloat(target.dataset.hours);
+                    calculateQuote();
+                });
+            });
+
+            // Frequency Selection
+            document.querySelectorAll('.freq-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.freq-btn').forEach(b => {
+                        b.classList.remove('active', 'border-gold-500', 'bg-gold-500/10');
+                        b.classList.add('border-gold-500/20', 'bg-noir-800');
+                    });
+
+                    const target = e.currentTarget;
+                    target.classList.add('active', 'border-gold-500', 'bg-gold-500/10');
+                    target.classList.remove('border-gold-500/20', 'bg-noir-800');
+
+                    discountMultiplier = parseFloat(target.dataset.discount);
+                    
+                    if(discountMultiplier === 0.80) freqNote.textContent = 'Billed Weekly';
+                    else if(discountMultiplier === 0.85) freqNote.textContent = 'Billed Bi-Weekly';
+                    else freqNote.textContent = 'One-Time Cleaning';
+
+                    calculateQuote();
+                });
+            });
+
+            // Addon Checkboxes
+            document.querySelectorAll('.addon-checkbox').forEach(cb => {
+                cb.addEventListener('change', calculateQuote);
+            });
+
+            // Modal Trigger Logic
+            const modal = document.getElementById('booking-modal');
+            const triggerBtn = document.getElementById('book-modal-trigger');
+            const closeBtn = document.getElementById('close-modal-btn');
+            const bookingForm = document.getElementById('booking-form');
+
+            triggerBtn.addEventListener('click', () => modal.classList.remove('hidden'));
+            closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
+
+            bookingForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you! Your concierge request has been received. Our dispatch manager will contact you shortly.');
+                modal.classList.add('hidden');
+                bookingForm.reset();
+            });
+
+            // Initial calculation on load
+            calculateQuote();
+        });
+    </script>
+</body>
+</html>
