@@ -6,8 +6,8 @@
 @font-face{font-family:"Figtree";font-weight:700;font-display:swap;src:url(fonts/figtree-latin-700-normal.woff2) format("woff2")}
 
 :root{
-  --cream:#f6f1e3;
-  --paper:#fffdf7;
+  --cream:#ffffff;
+  --paper:#ffffff;
   --ink:#16283f;
   --ink-soft:#4a586b;
   --navy:#1d3a5f;
@@ -98,7 +98,7 @@ section.alt{background:var(--cream)}
 /* tables */
 table{border-collapse:collapse;width:100%;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
 th,td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line);font-size:.98rem}
-th{background:var(--cream);font-weight:700;color:var(--navy)}
+th{background:#f5f6f8;font-weight:700;color:var(--navy)}
 tr:last-child td{border-bottom:none}
 td.num,th.num{text-align:right;white-space:nowrap}
 .table-wrap{overflow-x:auto}
