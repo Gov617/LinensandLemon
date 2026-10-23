@@ -136,3 +136,19 @@ details p{margin:10px 0 0;color:var(--ink-soft)}
   .prices{grid-template-columns:1fr}
   body{font-size:16.5px}
 }
+
+/* founding customer form */
+.founding{max-width:760px;margin:0 auto}
+.founding .eyebrow{margin:0 0 4px;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+.founding h2{margin-top:0}
+#founding-form{margin-top:18px}
+#founding-form .fgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 18px}
+#founding-form label{display:flex;flex-direction:column;gap:6px;font-weight:600;color:var(--ink);font-size:.95rem}
+#founding-form label.full{margin-top:14px}
+#founding-form .opt{font-weight:400;color:var(--ink-soft)}
+#founding-form input[type=text],#founding-form input[type=tel],#founding-form input[type=email],#founding-form select,#founding-form textarea{font:inherit;font-weight:400;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);width:100%;box-sizing:border-box}
+#founding-form input:focus,#founding-form select:focus,#founding-form textarea:focus{outline:2px solid var(--teal);outline-offset:1px;border-color:var(--teal)}
+#founding-form label.check{flex-direction:row;align-items:flex-start;gap:10px;font-weight:400;color:var(--ink-soft);font-size:.9rem;margin:16px 0 8px}
+#founding-form label.check input{margin-top:3px;width:18px;height:18px;flex:none}
+#founding-form .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+@media (max-width:640px){#founding-form .fgrid{grid-template-columns:1fr}}
