@@ -1,6 +1,26 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BCMPQ2WZWC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BCMPQ2WZWC');
+
+  // Count phone, text, email and "Book" clicks as events in Google Analytics
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var h = a.getAttribute('href');
+    if (h.indexOf('tel:') === 0) gtag('event', 'phone_click', { link_url: h });
+    else if (h.indexOf('sms:') === 0) gtag('event', 'text_click', { link_url: h });
+    else if (h.indexOf('mailto:') === 0) gtag('event', 'email_click', { link_url: h });
+    else if (h.indexOf('#book') !== -1) gtag('event', 'book_click', { link_text: (a.textContent || '').trim().slice(0, 60) });
+  });
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Pricing | Linens & Lemons Cleaning, Charlotte NC</title>
