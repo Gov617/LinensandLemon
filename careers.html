@@ -81,7 +81,7 @@
 <div class="panel apply-panel">
 <h2>Apply in a few minutes</h2>
 <p>Tell us a little about yourself and we will reach out within a few days.</p>
-<form id="apply-form" action="https://formsubmit.co/jobs@linensandlemons.com" method="POST">
+<form id="apply-form" action="https://formsubmit.co/jobs@linensandlemons.com" method="POST" enctype="multipart/form-data">
 <input type="hidden" name="_subject" value="New cleaner application">
 <input type="hidden" name="_template" value="table">
 <input type="hidden" name="_captcha" value="false">
@@ -118,6 +118,7 @@
 </div>
 </fieldset>
 <label class="full"><span>Tell us about your cleaning experience <span class="opt">(a few sentences is fine)</span></span><textarea name="experience_details" rows="4" required placeholder="Where you cleaned, what kind of homes, how long"></textarea></label>
+<label class="full"><span>Resume <span class="opt">(optional, PDF, Word or a photo, under 5 MB)</span></span><input type="file" name="attachment" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.heic"></label>
 <label class="full"><span>How did you hear about us? <span class="opt">(optional)</span></span><input type="text" name="heard_about" placeholder="Facebook, Nextdoor, Indeed, a friend"></label>
 <label class="check"><input type="checkbox" name="ok_to_contact" value="Yes" required> You can call or text me about this job. Message and data rates may apply. Reply STOP to opt out.</label>
 <button class="btn" type="submit">Send my application</button>
@@ -130,6 +131,8 @@
   var f=document.getElementById('apply-source'); if(f) f.value=src||document.referrer||'direct';
   var form=document.getElementById('apply-form');
   if(form) form.addEventListener('submit',function(){ if(window.gtag) gtag('event','generate_lead',{form:'application',source:src||'direct'}); });
+  var fi=form&&form.querySelector('input[type=file]');
+  if(fi) fi.addEventListener('change',function(){ if(fi.files[0]&&fi.files[0].size>5*1024*1024){ alert('That file is over 5 MB. Please choose a smaller file, or leave it off. A resume is optional.'); fi.value=''; } });
 })();
 </script>
 </div></section>

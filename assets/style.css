@@ -170,6 +170,7 @@ details p{margin:10px 0 0;color:var(--ink-soft)}
 #apply-form .choices label{flex-direction:row;align-items:center;gap:10px;font-weight:400}
 #apply-form label.check{flex-direction:row;align-items:flex-start;gap:10px;font-weight:400;color:var(--ink-soft);font-size:.9rem;margin:16px 0 8px}
 #apply-form label.check input{margin-top:3px;width:18px;height:18px;flex:none}
+#apply-form input[type=file]{font:inherit;font-weight:400;padding:10px;border:1px dashed var(--line);border-radius:10px;background:#fff;width:100%;box-sizing:border-box}
 #apply-form .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .apply-panel{max-width:760px;margin:0 auto}
 .apply-panel h2{margin-top:0}
