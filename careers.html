@@ -54,20 +54,84 @@
 <div>
 <h2>What to expect</h2>
 <ul class="tick">
-<li>W2 employee, not a contractor</li>
+<li>W2 employee, with payroll taxes handled</li>
 <li>Starting pay $18 an hour, paid for all working hours including drive time between homes</li>
-<li>A per job bonus when the work is done to standard and on time</li>
+<li>A bonus on every job done to standard and on time. Most cleans work out to about $23 to $35 an hour</li>
 <li>You keep 100% of tips</li>
-<li>Supplies, equipment and training provided</li>
+<li>Mileage between homes paid at the IRS rate</li>
+<li>Daytime jobs that start between 8 AM and 1 PM, on the days you choose</li>
+<li>Supplies, equipment and paid training provided</li>
 <li>Laundry of cloths and mop pads is handled for you</li>
 </ul>
 <p class="fine">Pay details are confirmed in your offer letter.</p>
 </div>
-<div class="panel">
-<h3>Apply</h3>
-<p>Email <a href="mailto:hello@linensandlemons.com">hello@linensandlemons.com</a> with your name, phone number, the days you can work, and any cleaning or hospitality experience. Hiring is subject to a background check.</p>
-<a class="btn small" href="mailto:hello@linensandlemons.com?subject=Cleaner%20application">Email us to apply</a>
+<div>
+<h2>What we look for</h2>
+<ul class="tick">
+<li>At least 1 year of paid cleaning experience: a cleaning company, private clients or hotel housekeeping</li>
+<li>A reliable car and a valid driver's license</li>
+<li>Able to pass a background check. A past record does not automatically rule you out</li>
+<li>On time, detail oriented and good at keeping in touch</li>
+</ul>
+<p>Part time to start, growing as we book more homes. No resume needed.</p>
 </div>
+</div></section>
+
+<section id="apply" style="padding-top:0"><div class="wrap">
+<div class="panel apply-panel">
+<h2>Apply in a few minutes</h2>
+<p>Tell us a little about yourself and we will reach out within a few days.</p>
+<form id="apply-form" action="https://formsubmit.co/jobs@linensandlemons.com" method="POST">
+<input type="hidden" name="_subject" value="New cleaner application">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://www.linensandlemons.com/applied.html">
+<input type="hidden" name="source" id="apply-source" value="">
+<p class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></p>
+<div class="fgrid">
+<label>Name<input type="text" name="name" autocomplete="name" required></label>
+<label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
+<label><span>Email <span class="opt">(optional)</span></span><input type="email" name="email" autocomplete="email"></label>
+<label>ZIP code<input type="text" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" required></label>
+<label>Paid cleaning experience<select name="experience" required><option value="">Choose one</option><option>None yet</option><option>Less than 1 year</option><option>1 to 2 years</option><option>3 years or more</option></select></label>
+<label>Reliable car and valid license?<select name="car_and_license" required><option value="">Choose one</option><option>Yes</option><option>No</option></select></label>
+</div>
+<fieldset>
+<legend>Which days can you work?</legend>
+<div class="days">
+<label><input type="checkbox" name="available_monday" value="Yes"> Mon</label>
+<label><input type="checkbox" name="available_tuesday" value="Yes"> Tue</label>
+<label><input type="checkbox" name="available_wednesday" value="Yes"> Wed</label>
+<label><input type="checkbox" name="available_thursday" value="Yes"> Thu</label>
+<label><input type="checkbox" name="available_friday" value="Yes"> Fri</label>
+<label><input type="checkbox" name="available_saturday" value="Yes"> Sat</label>
+<label><input type="checkbox" name="available_sunday" value="Yes"> Sun</label>
+</div>
+</fieldset>
+<fieldset>
+<legend>Cleaning a bathroom, what do you usually do first?</legend>
+<div class="choices">
+<label><input type="radio" name="bathroom_first" value="Mop the floor" required> Mop the floor</label>
+<label><input type="radio" name="bathroom_first" value="Spray the shower, tub and toilet so the cleaner can sit"> Spray the shower, tub and toilet so the cleaner can sit</label>
+<label><input type="radio" name="bathroom_first" value="Scrub the toilet bowl"> Scrub the toilet bowl</label>
+<label><input type="radio" name="bathroom_first" value="Not sure"> Not sure</label>
+</div>
+</fieldset>
+<label class="full"><span>Tell us about your cleaning experience <span class="opt">(a few sentences is fine)</span></span><textarea name="experience_details" rows="4" required placeholder="Where you cleaned, what kind of homes, how long"></textarea></label>
+<label class="full"><span>How did you hear about us? <span class="opt">(optional)</span></span><input type="text" name="heard_about" placeholder="Facebook, Nextdoor, Indeed, a friend"></label>
+<label class="check"><input type="checkbox" name="ok_to_contact" value="Yes" required> You can call or text me about this job. Message and data rates may apply. Reply STOP to opt out.</label>
+<button class="btn" type="submit">Send my application</button>
+</form>
+<p class="fine" style="margin-top:14px">Rather email? Send the same details to <a href="mailto:jobs@linensandlemons.com?subject=Cleaner%20application">jobs@linensandlemons.com</a>.</p>
+</div>
+<script>
+(function(){
+  var q=new URLSearchParams(location.search), src=[q.get('utm_source'),q.get('utm_medium'),q.get('utm_campaign')].filter(Boolean).join(' / ');
+  var f=document.getElementById('apply-source'); if(f) f.value=src||document.referrer||'direct';
+  var form=document.getElementById('apply-form');
+  if(form) form.addEventListener('submit',function(){ if(window.gtag) gtag('event','generate_lead',{form:'application',source:src||'direct'}); });
+})();
+</script>
 </div></section>
 
 </main>
