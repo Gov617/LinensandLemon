@@ -175,3 +175,7 @@ details p{margin:10px 0 0;color:var(--ink-soft)}
 .apply-panel{max-width:760px;margin:0 auto}
 .apply-panel h2{margin-top:0}
 @media (max-width:640px){#apply-form .fgrid{grid-template-columns:1fr}}
+
+/* Pre-launch founding bar (remove when booking opens) */
+.launch-bar{background:var(--navy);color:#fff;font-size:.95rem;text-align:center;padding-block:9px}
+.launch-bar a{color:var(--lemon);font-weight:700;margin-left:6px;white-space:nowrap}
