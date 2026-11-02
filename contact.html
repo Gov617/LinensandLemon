@@ -49,67 +49,14 @@
 <main id="main">
 
 <div class="page-head"><div class="wrap"><h1>Book or ask a question</h1>
-<p>Save your spot below, or call or email us if you would rather talk.</p></div></div>
+<p>Pick your day and book online below, or call or email us if you would rather talk.</p></div></div>
 <section id="book">
 <div class="wrap">
-<div class="panel founding">
-<p class="eyebrow">Opening December 1</p>
-<h2>Become a founding customer</h2>
-<p>The first 15 homes to book get <strong>$25 off their first clean</strong> with code <strong>FOUNDING25</strong>. Leave your details and we will call you before the calendar opens to anyone else.</p>
-<form id="founding-form" action="https://formsubmit.co/jobs@linensandlemons.com" method="POST">
-<input type="hidden" name="_subject" value="New founding customer sign up">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_next" value="https://www.linensandlemons.com/thanks.html">
-<input type="hidden" name="source" id="lead-source" value="">
-<p class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></p>
-<div class="fgrid">
-<label>Name<input type="text" name="name" autocomplete="name" required></label>
-<label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
-<label><span>Email <span class="opt">(optional)</span></span><input type="email" name="email" autocomplete="email"></label>
-<label>Neighborhood or ZIP<input type="text" name="neighborhood" required></label>
-<label>Home size<select name="home_size" required><option value="">Choose one</option><option>1 bedroom</option><option>2 bedrooms</option><option>3 bedrooms</option><option>4 or more bedrooms</option></select></label>
-<label>How often<select name="frequency" required><option value="">Choose one</option><option>Every week</option><option>Every two weeks</option><option>Every month</option><option>One time</option><option>Not sure yet</option></select></label>
-</div>
-<label class="full"><span>Anything we should know? <span class="opt">(optional)</span></span><textarea name="notes" rows="3" placeholder="Pets, move in or move out, preferred days"></textarea></label>
-<label class="check"><input type="checkbox" name="ok_to_contact" value="Yes" required> You can call or text me about my cleaning. Message and data rates may apply. Reply STOP to opt out.</label>
-<button class="btn" type="submit">Save my spot</button>
-<p id="founding-status" role="status" aria-live="polite" style="margin-top:12px;font-weight:600"></p>
-</form>
-</div>
-<!-- Online booking calendar. Put this back in place of the founding customer panel when booking opens.
+<p class="eyebrow">Now booking cleans from December 1</p>
 <h2>Book online</h2>
-<p class="note" style="background:#fff8db;border-left:4px solid #f2c94c;padding:12px 16px;border-radius:6px;margin:0 0 16px"><strong>Reading your price:</strong> for weekly, every-two-weeks or monthly plans, <strong>TOTAL</strong> is your first visit, a deeper reset priced at the one-time rate. <strong>Recurring Total</strong> is what you pay for every visit after that. Cards are not charged until the day of your cleaning.</p>
-<iframe src="https://linensandlemon.bookingkoala.com/booknow?embed=true" style="border:none;height:1000px" width="100%" scrolling="no"></iframe><script src="https://linensandlemon.bookingkoala.com/resources/embed.js" defer></script>
--->
-<script>
-(function(){
-  var q=new URLSearchParams(location.search), src=[q.get('utm_source'),q.get('utm_medium'),q.get('utm_campaign')].filter(Boolean).join(' / ');
-  var f=document.getElementById('lead-source'); if(f) f.value=src||document.referrer||'direct';
-  var form=document.getElementById('founding-form');
-  var status=document.getElementById('founding-status');
-  if(form) form.addEventListener('submit',function(e){
-    if(!window.fetch||!window.FormData) return; // old browser: normal submit
-    e.preventDefault();
-    var btn=form.querySelector('button[type=submit]'); btn.disabled=true; btn.textContent='Saving...';
-    status.style.color=''; status.textContent='';
-    fetch(form.action.replace('formsubmit.co/','formsubmit.co/ajax/'),{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
-      .then(function(r){return r.json();})
-      .then(function(d){
-        if(String(d.success)==='true'){
-          if(window.gtag) gtag('event','generate_lead',{form:'founding',source:src||'direct'});
-          if(window.fbq) fbq('track','Lead');
-          location.href='thanks.html';
-        } else { throw new Error(d.message||'not sent'); }
-      })
-      .catch(function(err){
-        btn.disabled=false; btn.textContent='Save my spot';
-        status.style.color='#b42318';
-        status.innerHTML='Sorry, that did not go through. Please call <a href="tel:+19805808119">(980) 580-8119</a> or email <a href="mailto:hello@linensandlemons.com">hello@linensandlemons.com</a>.<br><small style="font-weight:400">('+String(err.message||err).replace(/</g,'&lt;')+')</small>';
-      });
-  });
-})();
-</script>
+<p class="note" style="background:#fff8db;border-left:4px solid #f2c94c;padding:12px 16px;border-radius:6px;margin:0 0 12px"><strong>$25 off your first clean when you book by December 15.</strong> Enter code <strong>FOUNDING25</strong> at checkout. Got a postcard or door hanger from us? Use the code printed on it instead.</p>
+<p class="note" style="background:#f4f8f8;border-left:4px solid #1f8a8a;padding:12px 16px;border-radius:6px;margin:0 0 16px"><strong>Reading your price:</strong> for weekly, every two weeks or monthly plans, <strong>TOTAL</strong> is your first visit, a deeper reset priced at the one time rate. <strong>Recurring Total</strong> is what you pay for every visit after that. Cards are not charged until the day of your cleaning.</p>
+<iframe src="https://linensandlemon.bookingkoala.com/booknow?embed=true" title="Book a cleaning with Linens and Lemons" style="border:none;height:1000px" width="100%" scrolling="no"></iframe><script src="https://linensandlemon.bookingkoala.com/resources/embed.js" defer></script>
 </div>
 <div class="wrap cols">
 <div class="panel">
