@@ -314,6 +314,10 @@ details p{margin:10px 0 0;color:var(--ink-soft)}
   function showError(msg) { errEl.innerHTML = msg; errEl.style.display = 'block'; }
   function clearError() { errEl.style.display = 'none'; }
   function val(name) { return (form.elements[name].value || '').trim(); }
+  // HubSpot only creates a contact when an email is present, so phone-only leads get a placeholder
+  function placeholderEmail() {
+    return val('phone').replace(/\D/g, '').slice(-10) + '@noemail.linensandlemons.com';
+  }
 
   function send(pairs) {
     if (!LIVE) return Promise.resolve();
@@ -366,6 +370,7 @@ details p{margin:10px 0 0;color:var(--ink-soft)}
       send([
         ['firstname', val('firstname')],
         ['phone', val('phone')],
+        ['email', placeholderEmail()],
         ['lead_source', 'Instagram CLT50 offer page'],
         ['sms_consent', 'Agreed ' + new Date().toISOString() + ' on ' + location.href]
       ]).then(function () {
@@ -384,7 +389,7 @@ details p{margin:10px 0 0;color:var(--ink-soft)}
         ['phone', val('phone')],
         ['zip', val('zip')],
         ['clean_type', val('clean_type')],
-        ['email', val('email')]
+        ['email', val('email') || placeholderEmail()]
       ]).then(function () {
         track('form_step2_complete', { clean_type: val('clean_type') });
         finish();
